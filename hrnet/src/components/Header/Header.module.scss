@@ -1,0 +1,80 @@
+@use '../../pages/style/theme.scss';
+@import '../../pages/style/mixin.scss';
+
+.containerEmployee {
+    @include flexAlignCenter;
+    margin: 10px 150px;
+
+    .title {
+        position: absolute;
+        left: 40%;
+        font-size: 3em;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+}
+
+.container {
+    @include flexAlignCenter;
+    justify-content: space-between;
+    margin: 10px 150px 0 150px;
+
+    .titleCreate {
+        font-size: 3em;
+        font-weight: normal;
+        text-decoration: underline;
+    }
+}
+
+
+.img {
+    width: 200px;
+}
+
+.link {
+    @include linkbtn;
+
+}
+
+.linkResponsive {
+    @include linkbtn;
+    display: none;
+    margin: 20px 0;
+    width: max-content;
+}
+
+@media (max-width: 1300px) {
+    .container {
+        margin: 0 10px;
+        justify-content: space-around;
+
+        .link {
+            display: none;
+        }
+    }
+
+    .containerResponsive {
+        @include flexAlignCenter;
+        flex-direction: column;
+
+        .linkResponsive {
+            display: block;
+        }
+    }
+
+}
+
+@media (max-width: 600px) {
+    .img {
+        width: 100px;
+    }
+
+    .titleCreate {
+        font-size: 2em !important;
+    }
+
+    .linkResponsive {
+        padding: 5px;
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,53 @@
+@use '../../pages/style/theme.scss';
+
+.containerSearch {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+table,
+tr>:nth-child(1n) {
+    border: 1px solid theme.$bg-primary;
+}
+
+table {
+    width: 100%;
+
+    .headersName>:nth-child(1n) {
+        padding: 5px 10px;
+    }
+
+    .tbodyData,
+    td {
+        padding: 5px 10px;
+    }
+
+    .tbodyData>tr:nth-child(2n) {
+        background-color: rgba($color: theme.$bg-secondary, $alpha: 0.4);
+
+        &:hover {
+            background-color: theme.$bg-primary;
+        }
+    }
+    .rowData:hover {
+        background-color: theme.$bg-primary;
+    }
+}
+
+.tdNoData {
+    font-weight: bold;
+    text-align: center;
+}
+
+.containerShowingBtn {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 10px 0;
+
+    .numberEntries {
+        font-size: smaller;
+    }
+}

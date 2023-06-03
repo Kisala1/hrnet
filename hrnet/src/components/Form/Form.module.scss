@@ -1,0 +1,55 @@
+@use '../../pages/style/theme';
+@use '../../pages/style/index.scss';
+@import '../../pages/style/mixin.scss';
+
+.container {
+    @include flexAlignCenter;
+    margin: 0 400px;
+    padding: 20px 0;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px #000;
+    background-color: rgba($color: theme.$bg-primary, $alpha: 0.7);
+
+    .containerAdressInputs {
+        margin-left: 125px;
+        padding: 20px 20px 10px 15px;
+        border: 2px solid #000;
+        border-style: groove;
+
+        .legend {
+            font-weight: 500;
+        }
+    }
+
+    .blocInput {
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .container {
+        margin: 0 100px;
+
+        .containerAdressInputs {
+            margin-left: 46px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        margin: 0 50px 10px 50px;
+
+        .containerAdressInputs {
+            margin-left: 46px;
+            padding: 20px 10px 10px 15px;
+        }
+
+        .dropdownDepartments {
+            margin-left: 16px;
+        }
+    }
+}

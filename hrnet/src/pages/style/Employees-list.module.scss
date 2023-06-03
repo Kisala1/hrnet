@@ -1,0 +1,18 @@
+@use 'index.scss';
+@use '../../pages/style/theme.scss';
+@import '../../pages/style/mixin.scss';
+
+.container {
+    @include flexAlignCenter;
+    flex-direction: column;
+
+    .containerTable {
+        margin: 10px 150px;
+
+    }
+
+    .link {
+        @include linkbtn;
+        margin: 20px;
+    }
+}

@@ -1,0 +1,26 @@
+@use '../../pages/style/theme.scss';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+
+    .label {
+        margin-bottom: 10px;
+    }
+
+    .select {
+        cursor: pointer;
+        padding: 5px 10px;
+        font-size: medium;
+        background-color: theme.$bg-fourth;
+        border-radius: 5px;
+    }
+
+}
+
+@media (max-width: 1300px) {
+    .select {
+        width: 150px;
+    }
+}

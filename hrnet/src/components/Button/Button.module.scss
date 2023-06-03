@@ -1,0 +1,22 @@
+@use '../../pages/style/theme.scss';
+
+.btn {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: theme.$bg-third;
+
+    &:hover {
+        background-color: darken($color: theme.$bg-third, $amount: 10);
+        border: 1px solid #fff;
+    }
+}
+
+@media (maw-width: 1300px) {
+    .btn {
+        display: none ;
+    }
+}
