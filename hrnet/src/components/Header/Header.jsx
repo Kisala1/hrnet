@@ -8,7 +8,13 @@ export function Header({ viewEmployees }) {
       {viewEmployees ? (
         <div className={styles.containerEmployee}>
           <Link to={'/'}>
-            <img className={styles.img} src={logo} alt="logo Wealth heath" />
+            <img
+              className={styles.img}
+              src={logo}
+              alt="logo Wealth heath"
+              width={'200px'}
+              height={'200px'}
+            />
           </Link>
           <h1 className={styles.title}>Current employees</h1>
         </div>

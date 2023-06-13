@@ -17,8 +17,22 @@ export function Form({ textInputs, dateInputs, adressInputs }) {
   /* TODO faire en sorte que quand il y a une erreur sur un input n'efface pas leur contenu*/
   const [formErrors, setFormErrors] = useState({});
   const [showModal, setShowModal] = useState(false);
-  const noEspace = (name) => name.replace(/ /g, '');
   const dispatch = useDispatch();
+
+  // const test = textInputs
+  //   .map((el) => el.split(' ').join(''))
+  //   .map((elm, index) => (
+  //     <div key={index}>
+  //       <label>{elm}</label>
+  //       <Input id={elm} name={elm} error={formErrors[elm]} />
+  //     </div>
+  //   ));
+  // console.log(test);
+  // console.log(textInputs);
+
+  // const test1 = textInputs.map((name) => ({ name }));
+  // // .map((el) => el.split(' ').join(''));
+  // console.log(test1);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -37,48 +51,54 @@ export function Form({ textInputs, dateInputs, adressInputs }) {
       setShowModal(true);
       dispatch(createLocalStorage(Datas()));
     } else {
-      console.log("Formulaire non envoyé en raison d'erreurs.");
+      alert("Formulaire non envoyé en raison d'erreurs.");
     }
   };
 
   const renderForm = (
     <form onSubmit={handleSubmit} className={styles.container}>
       <div>
-        {textInputs.map((name, index) => (
-          <div key={index} className={styles.blocInput}>
-            <label>{name}</label>
-            <Input
-              id={noEspace(name)}
-              name={noEspace(name)}
-              error={formErrors[noEspace(name)]}
-            />
-          </div>
-        ))}
+        {/* {textInputs
+          .map((el) => el.split(' ').join(''))
+          .map((elm, index) => (
+            <div key={index} className={styles.blocInput}>
+              <label key={index}>{elm}</label>
+              <Input id={elm} name={elm} error={formErrors[elm]} />
+            </div>
+          ))}*/}
+          
+        {textInputs.map((el, index) => {
+          const elm = el.split(' ').join('');
+          return (
+            <div key={index} className={styles.blocInput}>
+              <label key={index}>{el}</label>
+              <Input id={elm} name={elm} error={formErrors[elm]} />
+            </div>
+          );
+        })}
       </div>
       <div>
-        {dateInputs.map((name, index) => (
-          <div key={index} className={styles.blocInput}>
-            <label>{name}</label>
-            <DateInput
-              id={noEspace(name)}
-              name={noEspace(name)}
-              error={formErrors[noEspace(name)]}
-            />
-          </div>
-        ))}
+        {dateInputs.map((el, index) => {
+          const elm = el.split(' ').join('');
+          return (
+            <div key={index} className={styles.blocInput}>
+              <label key={index}>{el}</label>
+              <DateInput id={elm} name={elm} error={formErrors[elm]} />
+            </div>
+          );
+        })}
       </div>
       <fieldset className={styles.containerAdressInputs}>
         <legend className={styles.legend}>Adress</legend>
-        {adressInputs.map((name, index) => (
-          <div key={index} className={styles.blocInput}>
-            <label>{name}</label>
-            <Input
-              id={noEspace(name)}
-              name={noEspace(name)}
-              error={formErrors[noEspace(name)]}
-            />
-          </div>
-        ))}
+        {adressInputs.map((el, index) => {
+          const elm = el.split(' ').join('');
+          return (
+            <div key={index} className={styles.blocInput}>
+              <label key={index}>{el}</label>
+              <Input id={elm} name={elm} error={formErrors[elm]} />
+            </div>
+          );
+        })}
         <DropDown name={'States'} options={states.States} />
         <div className={styles.blocInput}>
           <label>Zip Code</label>

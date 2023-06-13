@@ -7,12 +7,15 @@
 
 }
 
+
+
 table,
 tr>:nth-child(1n) {
     border: 1px solid theme.$bg-primary;
 }
 
 table {
+    margin: 0 10px;
     width: 100%;
 
     .headersName>:nth-child(1n) {
@@ -31,6 +34,7 @@ table {
             background-color: theme.$bg-primary;
         }
     }
+
     .rowData:hover {
         background-color: theme.$bg-primary;
     }
@@ -49,5 +53,13 @@ table {
 
     .numberEntries {
         font-size: smaller;
+    }
+}
+
+@media (max-width: 1300px) {
+
+    .containerTable {
+        width: 90vw;
+        overflow-x: auto;
     }
 }

@@ -126,18 +126,24 @@ export function Table({ datas, sortDatas }) {
         />
         <Search datas={datas} onSearch={handleSearch} />
       </div>
-      <table>
-        <thead>
-          <tr className={styles.headersName}>
-            {sortDatas.map((sortData, index) => (
-              <Sort key={index} sortKey={sortData.sortKey} onSort={handleSort}>
-                {sortData.content}
-              </Sort>
-            ))}
-          </tr>
-        </thead>
-        {renderTbody(datas)}
-      </table>
+      <div className={styles.containerTable}>
+        <table>
+          <thead>
+            <tr className={styles.headersName}>
+              {sortDatas.map((sortData, index) => (
+                <Sort
+                  key={index}
+                  sortKey={sortData.sortKey}
+                  onSort={handleSort}
+                >
+                  {sortData.content}
+                </Sort>
+              ))}
+            </tr>
+          </thead>
+          {renderTbody(datas)}
+        </table>
+      </div>
       <div className={styles.containerShowingBtn}>
         <p className={styles.numberEntries}>
           {/* TODO Showing {datas ? datas.length : 0} => datas.length incorrect doit afficher le chiffre de la 1ere entries  

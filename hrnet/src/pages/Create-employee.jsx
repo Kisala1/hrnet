@@ -1,5 +1,6 @@
 import { MainLayout } from '../components/MainLayout/MainLayout';
 import { Form } from '../components/Form/Form';
+
 const textInputs = ['First Name', 'Last Name'];
 const dateInputs = ['Date of Birth', 'Start Date'];
 const adressInputs = ['Street', 'City'];

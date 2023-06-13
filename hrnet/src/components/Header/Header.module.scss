@@ -26,9 +26,8 @@
     }
 }
 
-
 .img {
-    width: 200px;
+    width: 60%;
 }
 
 .link {
@@ -62,12 +61,18 @@
         }
     }
 
+    .containerEmployee {
+        margin: 10px;
+
+        .title {
+            left: 35%;
+            font-size: 1.7em;
+        }
+    }
+
 }
 
 @media (max-width: 600px) {
-    .img {
-        width: 100px;
-    }
 
     .titleCreate {
         font-size: 2em !important;
