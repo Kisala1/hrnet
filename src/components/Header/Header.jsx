@@ -22,7 +22,13 @@ export function Header({ viewEmployees }) {
         <>
           <div className={styles.container}>
             <Link to={'/'}>
-              <img className={styles.img} src={logo} alt="logo Wealth heath" />
+              <img
+                className={styles.img}
+                src={logo}
+                alt="logo Wealth heath"
+                width="200px"
+                height="200px"
+              />
             </Link>
             <h1 className={styles.titleCreate}>HRnet</h1>
             <Link className={styles.link} to={'/employeeslist'}>
