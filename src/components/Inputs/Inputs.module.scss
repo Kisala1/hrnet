@@ -1,1 +1,23 @@
-@use '../../pages/style/index.scss'
+.error {
+    margin: 0 0 10px 0;
+    width: 180px;
+    font-size: 0.8em;
+    color: red;
+    white-space: pre;
+}
+
+input {
+    margin: 10px 0;
+    width: 180px;
+}
+
+
+@media (max-width: 600px) {
+    input {
+        width: 130px;
+    }
+
+    .error {
+        width: 130px;
+    }
+}

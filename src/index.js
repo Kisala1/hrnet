@@ -13,7 +13,7 @@ root.render(
     <Provider store={store}>
       <Router>
         <Routes>
-          <Route exact path="/" element={<CreateEmployee />} />
+          <Route exact path="/" element={<EmployeesList />} />
           {/* <Route exact path="/employeeslist" element={<EmployeesList />} /> */}
         </Routes>
       </Router>

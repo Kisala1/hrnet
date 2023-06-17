@@ -13,7 +13,7 @@ export function Header({ viewEmployees }) {
               src={logo}
               alt="logo Wealth heath"
               width="200px"
-              height="200px"
+              height="180px"
             />
           </Link>
           <h1 className={styles.title}>Current employees</h1>
@@ -27,7 +27,7 @@ export function Header({ viewEmployees }) {
                 src={logo}
                 alt="logo Wealth heath"
                 width="200px"
-                height="200px"
+                height="180px"
               />
             </Link>
             <h1 className={styles.titleCreate}>HRnet</h1>

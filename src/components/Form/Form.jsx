@@ -66,12 +66,14 @@ export function Form({ textInputs, dateInputs, adressInputs }) {
               <Input id={elm} name={elm} error={formErrors[elm]} />
             </div>
           ))}*/}
-          
+
         {textInputs.map((el, index) => {
           const elm = el.split(' ').join('');
           return (
             <div key={index} className={styles.blocInput}>
-              <label key={index}>{el}</label>
+              <label key={index} htmlFor={elm}>
+                {el}
+              </label>
               <Input id={elm} name={elm} error={formErrors[elm]} />
             </div>
           );
@@ -82,7 +84,9 @@ export function Form({ textInputs, dateInputs, adressInputs }) {
           const elm = el.split(' ').join('');
           return (
             <div key={index} className={styles.blocInput}>
-              <label key={index}>{el}</label>
+              <label key={index} htmlFor={elm}>
+                {el}
+              </label>
               <DateInput id={elm} name={elm} error={formErrors[elm]} />
             </div>
           );
@@ -94,14 +98,16 @@ export function Form({ textInputs, dateInputs, adressInputs }) {
           const elm = el.split(' ').join('');
           return (
             <div key={index} className={styles.blocInput}>
-              <label key={index}>{el}</label>
+              <label key={index} htmlFor={elm}>
+                {el}
+              </label>
               <Input id={elm} name={elm} error={formErrors[elm]} />
             </div>
           );
         })}
         <DropDown name={'States'} options={states.States} />
         <div className={styles.blocInput}>
-          <label>Zip Code</label>
+          <label htmlFor="ZipCode">Zip Code</label>
           <NumberInput
             id={'ZipCode'}
             name={'ZipCode'}
