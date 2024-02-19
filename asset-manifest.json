@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hrnet/static/css/main.dd7a1cf4.css",
-    "main.js": "/hrnet/static/js/main.31fa3ef3.js",
-    "static/js/787.a603b31f.chunk.js": "/hrnet/static/js/787.a603b31f.chunk.js",
-    "static/media/logo.jpg": "/hrnet/static/media/logo.550a61bba16a38a1d91d.jpg",
-    "index.html": "/hrnet/index.html",
-    "main.dd7a1cf4.css.map": "/hrnet/static/css/main.dd7a1cf4.css.map",
-    "main.31fa3ef3.js.map": "/hrnet/static/js/main.31fa3ef3.js.map",
-    "787.a603b31f.chunk.js.map": "/hrnet/static/js/787.a603b31f.chunk.js.map"
+    "main.css": "/kisala1.github.io/static/css/main.dd7a1cf4.css",
+    "main.js": "/kisala1.github.io/static/js/main.a6aad8a3.js",
+    "static/js/787.a603b31f.chunk.js": "/kisala1.github.io/static/js/787.a603b31f.chunk.js",
+    "static/media/logo.jpg": "/kisala1.github.io/static/media/logo.550a61bba16a38a1d91d.jpg",
+    "index.html": "/kisala1.github.io/index.html",
+    "main.dd7a1cf4.css.map": "/kisala1.github.io/static/css/main.dd7a1cf4.css.map",
+    "main.a6aad8a3.js.map": "/kisala1.github.io/static/js/main.a6aad8a3.js.map",
+    "787.a603b31f.chunk.js.map": "/kisala1.github.io/static/js/787.a603b31f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dd7a1cf4.css",
-    "static/js/main.31fa3ef3.js"
+    "static/js/main.a6aad8a3.js"
   ]
 }
