@@ -19,21 +19,6 @@ export function Form({ textInputs, dateInputs, adressInputs }) {
   const [showModal, setShowModal] = useState(false);
   const dispatch = useDispatch();
 
-  // const test = textInputs
-  //   .map((el) => el.split(' ').join(''))
-  //   .map((elm, index) => (
-  //     <div key={index}>
-  //       <label>{elm}</label>
-  //       <Input id={elm} name={elm} error={formErrors[elm]} />
-  //     </div>
-  //   ));
-  // console.log(test);
-  // console.log(textInputs);
-
-  // const test1 = textInputs.map((name) => ({ name }));
-  // // .map((el) => el.split(' ').join(''));
-  // console.log(test1);
-
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -55,56 +40,27 @@ export function Form({ textInputs, dateInputs, adressInputs }) {
     }
   };
 
+  function renderInput(el, index, Component) {
+    const elm = el.split(' ').join('');
+    return (
+      <div key={index} className={styles.blocInput}>
+        <label htmlFor={elm}>{el}</label>
+        <Component id={elm} name={elm} error={formErrors[elm]} />
+      </div>
+    );
+  }
+
   const renderForm = (
     <form onSubmit={handleSubmit} className={styles.container}>
-      <div>
-        {/* {textInputs
-          .map((el) => el.split(' ').join(''))
-          .map((elm, index) => (
-            <div key={index} className={styles.blocInput}>
-              <label key={index}>{elm}</label>
-              <Input id={elm} name={elm} error={formErrors[elm]} />
-            </div>
-          ))}*/}
+      <div>{textInputs.map((el, index) => renderInput(el, index, Input))}</div>
 
-        {textInputs.map((el, index) => {
-          const elm = el.split(' ').join('');
-          return (
-            <div key={index} className={styles.blocInput}>
-              <label key={index} htmlFor={elm}>
-                {el}
-              </label>
-              <Input id={elm} name={elm} error={formErrors[elm]} />
-            </div>
-          );
-        })}
-      </div>
       <div>
-        {dateInputs.map((el, index) => {
-          const elm = el.split(' ').join('');
-          return (
-            <div key={index} className={styles.blocInput}>
-              <label key={index} htmlFor={elm}>
-                {el}
-              </label>
-              <DateInput id={elm} name={elm} error={formErrors[elm]} />
-            </div>
-          );
-        })}
+        {dateInputs.map((el, index) => renderInput(el, index, DateInput))}
       </div>
+
       <fieldset className={styles.containerAdressInputs}>
         <legend className={styles.legend}>Adress</legend>
-        {adressInputs.map((el, index) => {
-          const elm = el.split(' ').join('');
-          return (
-            <div key={index} className={styles.blocInput}>
-              <label key={index} htmlFor={elm}>
-                {el}
-              </label>
-              <Input id={elm} name={elm} error={formErrors[elm]} />
-            </div>
-          );
-        })}
+        {adressInputs.map((el, index) => renderInput(el, index, Input))}
         <DropDown name={'States'} options={states.States} />
         <div className={styles.blocInput}>
           <label htmlFor="ZipCode">Zip Code</label>
