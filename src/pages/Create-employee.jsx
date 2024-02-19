@@ -8,7 +8,7 @@ const adressInputs = ['Street', 'City'];
 export function CreateEmployee() {
   return (
     <>
-      <MainLayout viewEmployees={false}>
+      <MainLayout viewEmployees={true}>
         <Form
           textInputs={textInputs}
           dateInputs={dateInputs}
