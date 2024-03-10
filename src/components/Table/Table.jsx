@@ -1,6 +1,7 @@
 import { Sort } from './Sort/Sort';
 import { Show } from './Show/Show';
 import { Search } from './Search/Search';
+import { Showing } from './Showing/Showing';
 import { Pagination } from './Pagination/Pagination';
 import { useEffect, useState } from 'react';
 import styles from './Table.module.scss';
@@ -145,12 +146,12 @@ export function Table({ datas, sortDatas }) {
         </table>
       </div>
       <div className={styles.containerShowingBtn}>
-        <p className={styles.numberEntries}>
-          {/* TODO Showing {datas ? datas.length : 0} => datas.length incorrect doit afficher le chiffre de la 1ere entries  
-          ex : Showing 1 to 10 of 16 (page 1) ; Showing 11 to 10 of 16 (page 2) */}
-          Showing {datas ? datas.length : 0} to {numEntries} of{' '}
-          {datas ? datas.length : 0} entries
-        </p>
+        <Showing
+          datas={datas}
+          filteredDataByPage={filteredDataByPage}
+          currentPage={currentPage}
+          numEntries={numEntries}
+        />
         <Pagination
           currentPage={currentPage}
           totalPages={totalPages}
