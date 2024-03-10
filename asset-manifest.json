@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.77ae8363.css",
-    "main.js": "/static/js/main.3debfad4.js",
-    "static/js/787.a603b31f.chunk.js": "/static/js/787.a603b31f.chunk.js",
-    "static/media/logo.jpg": "/static/media/logo.550a61bba16a38a1d91d.jpg",
-    "index.html": "/index.html",
-    "main.77ae8363.css.map": "/static/css/main.77ae8363.css.map",
-    "main.3debfad4.js.map": "/static/js/main.3debfad4.js.map",
-    "787.a603b31f.chunk.js.map": "/static/js/787.a603b31f.chunk.js.map"
+    "main.css": "/kisala1.github.io/static/css/main.77ae8363.css",
+    "main.js": "/kisala1.github.io/static/js/main.abf4f15e.js",
+    "static/js/787.a603b31f.chunk.js": "/kisala1.github.io/static/js/787.a603b31f.chunk.js",
+    "static/media/logo.jpg": "/kisala1.github.io/static/media/logo.550a61bba16a38a1d91d.jpg",
+    "index.html": "/kisala1.github.io/index.html",
+    "main.77ae8363.css.map": "/kisala1.github.io/static/css/main.77ae8363.css.map",
+    "main.abf4f15e.js.map": "/kisala1.github.io/static/js/main.abf4f15e.js.map",
+    "787.a603b31f.chunk.js.map": "/kisala1.github.io/static/js/787.a603b31f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.77ae8363.css",
-    "static/js/main.3debfad4.js"
+    "static/js/main.abf4f15e.js"
   ]
 }
